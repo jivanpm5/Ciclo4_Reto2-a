@@ -66,8 +66,8 @@ public class UserService {
                 if (user.getZone() == null) {
                     user1Db.get().setZone(user.getZone());
                 }
-                if (user.getZone() == null) {
-                    user1Db.get().setZone(user.getType());
+                if (user.getType() == null) {
+                    user1Db.get().setType(user.getType());
                 }
                 userRepository.save(user1Db.get());
                 return user1Db.get();
